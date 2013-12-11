@@ -204,12 +204,7 @@ public class RosterTest {
         System.out.println("Persons who are eligible for Selective Service " +
             "(lambda expression):");
 
-        printPersons(
-            roster,
-            (Person p) -> p.getGender() == Person.Sex.MALE
-                && p.getAge() >= 18
-                && p.getAge() <= 25
-        );
+        printPersons(roster,(Person p) -> p.getGender() == Person.Sex.MALE && p.getAge() >= 18 && p.getAge() <= 25);
 
         System.out.println();
 
